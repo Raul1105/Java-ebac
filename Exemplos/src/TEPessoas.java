@@ -1,4 +1,4 @@
-public class Pessoas{
+public class TEPessoas{
     
     private String nome;
     private String sexo;
