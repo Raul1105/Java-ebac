@@ -19,7 +19,7 @@ public class TEPessoas{
         return sexo;
     }
     
-    public Pessoas(String nome, String sexo){
+    public TEPessoas(String nome, String sexo){
         this.nome = nome;
         this.sexo = sexo;
     }
