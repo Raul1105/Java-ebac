@@ -8,7 +8,7 @@ public class TerceiroExercicio{
 	}
 	
 	public static void executando(){
-	    List<Pessoas> pessoas = new ArrayList<Pessoas>();
+	    List<TEPessoas> pessoas = new ArrayList<TEPessoas>();
 	    
 	    pessoas.add(new Pessoas("Raul", "masculino"));
 	    pessoas.add(new Pessoas("Larissa", "feminino"));
@@ -16,16 +16,16 @@ public class TerceiroExercicio{
 	    pessoas.add(new Pessoas("Jose","masculino"));
 	    pessoas.add(new Pessoas("Lorena", "feminino"));
 	    
-	    List<Pessoas> mulheres = new ArrayList<Pessoas>();
-	    List<Pessoas> homens = new ArrayList<Pessoas>();
+	    List<TEPessoas> mulheres = new ArrayList<Pessoas>();
+	    List<TEPessoas> homens = new ArrayList<Pessoas>();
 	    
-	    for(Pessoas pessoa : pessoas){
+	    for(TEPessoas pessoa : pessoas){
 	        if(pessoa.getSexo().equals("feminino")){
 	            mulheres.add(pessoa);
 	        }
 	    }
 	    
-	    for(Pessoas pessoa : pessoas){
+	    for(TEPessoas pessoa : pessoas){
 	        if(pessoa.getSexo().equals("masculino")){
 	            homens.add(pessoa);
 	        }
