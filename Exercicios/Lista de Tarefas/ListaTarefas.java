@@ -53,6 +53,12 @@ public class GerenciadorTarefa{
                     descricao = s.nextLine();
                     
                     Tarefa.deletarTarefa(descricao, tarefas);
+                    break;
+                case 5:
+                    System.out.println("======Listando tarefas concluidas======");
+                    
+                    Tarefa.listarConcluidas(tarefas);
+                    break;
             }
         } while(resposta != 0);
 	}
