@@ -38,24 +38,32 @@ public class Tarefa{
         Tarefa tarefa = new Tarefa(descricao, false);
         lista.add(tarefa);
         System.out.println("Nova tarefa adicionada com sucesso!");
+        System.out.println("==============================");
     }
     
     public static void listarTarefas(List<Tarefa> lista){
         for(Tarefa tarefa : lista){
             System.out.printf("Tarefa: %s concluida: %b%n", tarefa.getDescricao(), tarefa.isConcluida());
         }
+        
+        System.out.println("==============================");
     }
     
     public static void concluirTarefa(String descricao, List<Tarefa> lista){
         
+        
         for(Tarefa tarefa : lista){
-            if(tarefa.isConcluida()){
-                System.out.println("Tarefa ja concluida ou não existe");
-            } else if (tarefa.getDescricao().equalsIgnoreCase(descricao)){
-                tarefa.setConcluida(true);
-                System.out.printf("Tarefa %s concluida com sucesso!%n", tarefa.getDescricao());
+            if(tarefa.getDescricao().equalsIgnoreCase(descricao)){
+                if(tarefa.isConcluida()){
+                    System.out.printf("Tarefa %s ja concluida ou não existe%n", descricao);
+                } else {
+                    tarefa.setConcluida(true);
+                    System.out.printf("Tarefa %s concluida com sucesso%n", tarefa.getDescricao());
+                }
             }
         }
+        
+        System.out.println("==============================");
             
     }
     
@@ -69,6 +77,8 @@ public class Tarefa{
             System.out.printf("Tarefa %s excluida com sucesso%n", descricao);
         }
         
+        System.out.println("==============================");
+        
     }
     
     public static void listarConcluidas(List<Tarefa> lista){
@@ -77,6 +87,8 @@ public class Tarefa{
                 System.out.printf("Tarefa: %s%n", tarefa.getDescricao());
             }
         }
+        
+        System.out.println("==============================");
     }
     
     
